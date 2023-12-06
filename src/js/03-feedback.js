@@ -13,8 +13,8 @@ if (getFormValue) {
 
 const hangleChange = evt => {
   const { name, value } = evt.target;
-  (formValue[name] = value),
-    localStorage.setItem('feedback-form-state', JSON.stringify(formValue));
+  formValue[name] = value;
+  localStorage.setItem('feedback-form-state', JSON.stringify(formValue));
 };
 
 function onFormSubmit(evt) {
